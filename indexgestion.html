@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liste des stagiaires</title>
+  <link rel="stylesheet" href="style">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Gestion des stagiaires</h1>
+      <h2>Formulaire d’ajout</h2>
+
+      <form>
+        <div class="form-row">
+          <div class="field">
+            <label for="id">ID</label>
+            <input type="number" id="txtid" name="id" placeholder="Entrer l'identifiant" />
+            <span class="error">Veuillez saisir un identifiant valide.</span>
+          </div>
+
+          <div class="field">
+            <label for="nom">Nom</label>
+            <input type="text" id="txtnom" name="nom" placeholder="Entrer le nom" />
+            <span class="error">Le nom est obligatoire.</span>
+          </div>
+
+          <div class="field">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="txtprenom" name="prenom" placeholder="Entrer le prénom" />
+            <span class="error">Le prénom est obligatoire.</span>
+          </div>
+
+          <div class="field">
+            <label for="age">Âge</label>
+            <input type="number" id="txtage" name="age" placeholder="Entrer l'âge" />
+            <span class="error">Veuillez saisir un âge valide.</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" id="btn_ajouter" class="btn btn-primary">Ajouter Stagiaire</button>
+          <button id="btn_afficher" class="btn btn-secondary">Afficher</button>
+          <button id="btn_tester" onclick="tester(event)" class="btn btn-secondary">tester</button>
+        </div>
+      </form>
+
+
+
+      <div class="table-wrapper">
+        <table id="table_stagiaires">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Âge</th>
+              <th>Modules</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Radi</td>
+              <td>Hamza</td>
+              <td>18</td>
+              <td>
+                <div class="module-box">
+                  <strong>Algo</strong>
+
+                  CC1: 12 | CC2: 3 | CC3: 14 | EFM: 21 || NoteModule : 14.53
+                </div>
+                <div class="module-box">
+                  <strong>HTML</strong>
+
+                  CC1: 13 | CC2: 13 | CC3: 14 | EFM: 26 || NoteModule : 14.53
+                </div>
+                <div class="module_box">
+                  <strong>Note Générale : 14.00</strong>
+                </div>
+              </td>
+            </tr>
+
+
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4"><strong>Meilleures notes</strong></td>
+              <td>
+                <strong>CC1 max:</strong> 13 
+
+                <strong>CC2 max:</strong> 18 
+
+                <strong>CC3 max:</strong> 14 
+
+                <strong>EFM max:</strong> 26
+              </td>
+            </tr>
+          </tfoot>
+          <div >
+            <label for="search">rechercher</label>
+            <input id="searchBox" type="text" >
+            <button  onclick="recherche()">Confirm</button>
+          </div>
+          
+        </table>
+      </div>
+  </div>
+  <script src="script"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <form>
+        <div class="form-row">
+          <div class="field">
+            <label for="id">Le stagiaire </label>
+            <input type="number" id="txtid" name="id" placeholder="Entrer l'identifiant" />
+          </div>
+
+          <div class="field">
+            <label for="module">Module</label>
+            <select id="sltmodule" name="module">
+              <option value="">-- Choisir un module --</option>
+              <option value="algo">Algo</option>
+              <option value="html">HTML</option>
+            </select>
+            <span class="error">Veuillez choisir un module.</span>
+          </div>
+
+          <div class="field">
+            <label for="cc1">CC1</label>
+            <input type="number" id="txtcc1" name="cc1" placeholder="Entrer la note CC1" />
+            <span class="error">La note CC1 est obligatoire.</span>
+          </div>
+
+          <div class="field">
+            <label for="cc2">CC2</label>
+            <input type="number" id="txtcc2" name="cc2" placeholder="Entrer la note CC2" />
+            <span class="error">La note CC2 est obligatoire.</span>
+          </div>
+
+          <div class="field">
+            <label for="cc3">CC3</label>
+            <input type="number" id="txtcc3" name="cc3" placeholder="Entrer la note CC3" />
+            <span class="error">La note CC3 est obligatoire.</span>
+          </div>
+
+          <div class="field">
+            <label for="efm">EFM</label>
+            <input type="number" id="txtefm" name="efm" placeholder="Entrer la note EFM" />
+            <span class="error">La note EFM est obligatoire.</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" id="btn_ajouter" class="btn btn-primary">Ajouter</button>
+          <button type="reset" class="btn btn-secondary">Annuler</button>
+        </div>
+      </form> -->

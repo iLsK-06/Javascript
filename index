@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solidarité Partagée</title>
+</head>
+<body>
+
+  <h1>Solidarité Partagée - Bénévoles</h1>
+
+  
+  <form>
+    <label>Nom Complet :</label><br>
+    <input type="text" id="nameUser" placeholder="Ex: Hamza Radi" /><br><br>
+
+    <label>Ville :</label><br>
+    <input type="text" id="cityUser" placeholder="Ex: Casablanca" /><br><br>
+
+    <label>Compétence :</label><br>
+    <input type="text" id="competUser" placeholder="Ex: Médecin" /><br><br>
+
+    <label>Disponibilité :</label><br>
+    <input type="text" id="disponibiliteUser" placeholder="Ex: Semaine, Week-end" /><br><br>
+
+    <label>Type de Mission :</label><br>
+    <input type="text" id="missionUser" placeholder="Ex: Distribution de nourriture" /><br><br>
+
+    <label>Email :</label><br>
+    <input type="text" id="emailUser" placeholder="exemple@mail.com" /><br><br>
+
+    <label>Mot de passe :</label><br>
+    <input type="password" id="passUser" placeholder="Min. 6 caractères" /><br><br>
+
+    <button id="submit">Soumettre la candidature</button>
+  </form>
+
+  <br>
+
+
+
+  <br><br>
+
+  <h2>Liste des Candidatures</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Ville</th>
+        <th>Compétence</th>
+        <th>Disponibilité</th>
+        <th>Mission</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="table">
+     
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
